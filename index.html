@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aryaman's Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+               url('https://c4.wallpaperflare.com/wallpaper/899/777/69/color-background-surface-solid-wallpaper-preview.jpg') no-repeat center center/cover;
+   color: white;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   position: relative;
+ }
+
+ header h1 {
+  font-size: 4em;
+  margin-bottom: 0.3em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+ }
+
+ header p {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+
+header .resume-btn {
+  position: absolute;
+  top: 50px; /* Adjusted position to move it down */
+  right: 20px;
+  padding: 8px 16px; /* Reduced padding to make the button smaller */
+  background-color: #28a745; /* Green color */
+  color: white;
+  text-decoration: none;
+  font-size: 1em; /* Slightly smaller font */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+header .resume-btn:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0 15px;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+
+   /* Professional Summary Section */
+#summary {
+  background: radial-gradient(circle, #f0f0f0, #e0e0e0);
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 5px solid #007bff;
+}
+
+.summary-container {
+  max-width: 1000px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.summary-container:hover {
+  transform: translateY(-10px);
+}
+
+.summary-heading {
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: black;
+  position: relative;
+  z-index: 10;
+}
+
+.summary-line {
+  width: 120px;
+  height: 4px;
+  background-color: #007bff;
+  margin: 20px auto;
+  position: relative;
+  z-index: 5;
+}
+
+.summary-text {
+  font-size: 1.3em;
+  line-height: 1.8;
+  font-style: normal;
+  color: #444;
+  margin-top: 20px;
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.7));
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional subtle fade-in animation */
+#summary {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    /* Key Skills Section */
+    #skills {
+      padding: 80px 20px;
+      background-color: #fff;
+    }
+
+    #skills h2 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #333;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Adjust to fit 6 skills horizontally */
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .skill-card {
+      background: #f0f0f0;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border: 2px solid #007bff;
+    }
+
+    .skill-card h3 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      color: #007bff;
+    }
+
+    .skill-card p {
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    /* Projects Section */
+    #projects {
+      padding: 80px 20px;
+      background-color: #f9f9f9;
+    }
+
+    #projects h2 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #333;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Fit 6 projects in grid */
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .project-card {
+      background: #e8e8e8;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border: 2px solid #28a745;
+    }
+
+    .project-card h3 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      color: #007bff; /* Blue color for consistency */
+    }
+
+    .project-card p {
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    /* Certifications Section */
+    #certifications {
+      padding: 80px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    #certifications h2 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .certifications-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Adjusted for 2 certifications */
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .certification-card {
+      background: #f0f0f0;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .certification-card h3 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      color: #007bff;
+    }
+
+    .certification-img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+      border-radius: 10px;
+    }
+
+    .certification-img:hover {
+      transform: scale(1.5);
+    }
+
+     /* Contact Section */
+    #contact {
+      padding: 80px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    #contact h2 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    #contact p {
+      font-size: 1.3em;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #333;
+      color: white;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header Section with Background Image -->
+<header>
+  <h1>Aryaman</h1>
+  <p>Lucknow, India | Email: aryamanmaurya29@gmail.com | Phone: (91) 9653-8034-23</p>
+  <nav>
+    <a href="#summary">Summary</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="resume-btn" href="https://profile.indeed.com/p/aryamanm-bpbsk4n" download target="_blank">
+    Download Resume
+  </a>
+</header>
+
+<!-- Professional Summary Section -->
+<section id="summary">
+  <div class="summary-container">
+    <h2 class="summary-heading">Professional Summary</h2>
+    <div class="summary-line"></div>
+    <p class="summary-text">
+      A dynamic and highly motivated cloud engineer with 1+ years of experience in cloud computing, proficient in AWS Cloud, Terraform, Linux Administration, Automation with Ansible and Bash-scripting and other cloud technologies. Adept at solving complex problems and building scalable solutions, I thrive in fast-paced environments and strive to contribute to innovative projects that redefine the limits of cloud engineering .
+    </p>
+  </div>
+</section>
+
+
+  <!-- Key Skills Section -->
+  <section id="skills">
+    <h2>Key Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Cloud Architecture</h3>
+        <p>Skilled in AWS Cloud architecture, with hands-on experience in designing, deploying, and managing scalable cloud solutions.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Infrastructure as Code</h3>
+        <p>Proficient in Terraform for building and managing AWS infrastructure, enabling efficient and reliable cloud deployments.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Automation</h3>
+        <p>Skilled in Ansible and Bash scripting for automating IT processes, enhancing efficiency, and managing system configurations.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Contanarization</h3>
+        <p>Proficient in containerization using Docker, with experience in building, deploying, and managing containerized applications</p>
+      </div>
+      <div class="skill-card">
+        <h3>Linux-Administration</h3>
+        <p>Strong understanding of Linux administration, including system management, troubleshooting, and automation.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Database Management</h3>
+        <p>Experienced in MySQL database management, with the capability to configure, optimize, and maintain database systems</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Projects Section -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <h3>
+        <a href="https://hub.docker.com/r/aryamansam/pratice-question-app" target="_blank" title="View on DockerHub">
+          Practice Questions App
+        </a>
+      </h3>
+      <p>A web-based app for serving practice questions with Docker, Python, and Flask.</p>
+    </div>
+    <div class="project-card">
+      <h3>
+        <a href="https://github.com/aryamanmaurya/scalable-web-architructure" target="_blank" title="View on GitHub">
+          AWS Infrastructure Developement
+        </a>
+      </h3>
+      <p>Developed a auto-scalable & load-balanced infra for the web-based application using terraform.</p>
+    </div>
+    <div class="project-card">
+      <h3>
+        <a href="https://github.com/aryamanmaurya/host-static-website-on-s3" target="_blank" title="View on GitHub">
+          AWS S3 web-hosting
+        </a>
+      </h3>
+      <p>Hosted a static website on aws s3 bucket and used IaC for automation.</p>
+    </div>
+    <div class="project-card">
+      <h3>
+        <a href="https://github.com/aryamanmaurya/LampSetupAnsible" target="_blank" title="View on GitHub">
+          LAMP-Stack Setup 
+        </a>
+      </h3>
+      <p>Created Ansible playbooks for LAMP stack setup in multi-server deployments.</p>
+    </div>
+    <div class="project-card">
+      <h3>
+        <a href="https://github.com/aryamanmaurya/samba-server-setup" target="_blank" title="View on GitHub">
+          Bash Scripting
+        </a>
+      </h3>
+      <p>Automated Samba-Server setup for files sharing between diffirent operating systems.</p>
+    </div>
+    <div class="project-card">
+      <h3>
+        <a href="https://hub.docker.com/r/aryamansam/file_to_pdf" target="_blank" title="View on DockerHub">
+          Real-Time Text File Processor and Converter
+        </a>
+      </h3>
+      <p>Developed a tool for automated real-time files precessing using Python and Flask.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications">
+  <h2>Certifications</h2>
+  <div class="certifications-grid">
+    <div class="certification-card">
+      <h3>
+        <a href="https://drive.google.com/file/d/1EF8W7DEsoK9eqir0MmK9bOEZDkyTTys0/view?usp=sharing" target="_blank">
+          RHCSA
+        </a>
+      </h3>
+    </div>
+    <div class="certification-card">
+      <h3>
+        <a href="https://drive.google.com/file/d/1EF8W7DEsoK9eqir0MmK9bOEZDkyTTys0/view?usp=sharing" target="_blank">
+          AWS Solutions Architect
+        </a>
+      </h3>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out via the following methods:</p>
+    <p><strong>Phone</strong>: (91) 9653-8034-23</p>
+    <p><strong>Email</strong>: aryamanmaurya29@gmail.com</p>
+    <p><strong>GithubProfile</strong>: <a href="https://github.com/aryamanmaurya?tab=overview&from=2024-08-01&to=2024-08-31" target="_blank">github.com/in/aryaman</a></p>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Aryaman's Portfolio</p>
+  </footer>
+
+</body>
+</html>
+
